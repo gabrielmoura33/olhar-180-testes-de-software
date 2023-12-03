@@ -1,0 +1,10 @@
+query GetAllActiveTasks {
+  getActiveTasks {
+    id
+    title
+    description
+    date
+    priority
+    isActive
+  }
+}

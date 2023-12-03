@@ -1,0 +1,11 @@
+query GetTaskById($id: String!) {
+  getTaskById(id: $id) {
+    id
+    title
+    description
+    date
+    priority
+    userId
+    isActive
+  }
+}

@@ -1,0 +1,3 @@
+mutation DeactivateTask($id: String!) {
+  deactivateTask(id: $id)
+}

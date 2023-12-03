@@ -1,0 +1,18 @@
+version: "3"
+
+services:  
+  database:
+    container_name: olhar_180_psql
+    image: "bitnami/postgresql"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=olhar_180_PSQL_DEV
+    volumes:
+      - "postgresql_data:/bitnami/postgresql"
+
+volumes:
+  postgresql_data:
+    driver: local
