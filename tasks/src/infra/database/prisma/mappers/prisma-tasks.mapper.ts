@@ -1,6 +1,6 @@
 // prisma-tasks-mapper.ts
 import { Task as PrismaTask } from '@prisma/client'; 
-import { Task } from 'src/app/tasks/entities/tasks.entity';
+import { Task } from '@application/tasks/entities/tasks.entity';
 
 
 export class PrismaTasksMapper {

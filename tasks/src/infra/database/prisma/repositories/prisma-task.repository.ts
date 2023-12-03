@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
 
-import { CreateTaskDto } from 'src/app/tasks/dtos/create-task.dto';
+import { CreateTaskDto } from '@application/tasks/dtos/create-task.dto';
 
-import { TasksRepository } from 'src/app/tasks/repositories/tasks.repository';
+import { TasksRepository } from '@application/tasks/repositories/tasks.repository';
 import { PrismaTasksMapper } from '../mappers/prisma-tasks.mapper';
-import { Task } from 'src/app/tasks/entities/tasks.entity';
+import { Task } from '@application/tasks/entities/tasks.entity';
 
 
 @Injectable()

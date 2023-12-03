@@ -14,13 +14,25 @@ const config: Config = {
     '!**/*.entity.ts',    
     '!src/main.ts',    
     '!**/node_modules/**',
+    '!**/*.config.ts',
+    '!**/dist/**',
+    '!**/coverage/**',
+    '!**/*.dto.ts',
+    '!**/*.input.ts',
   ],
   coverageDirectory: './coverage',
   testEnvironment: 'node',
-
-  // moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-  //   prefix: '<rootDir>/',
-  // }),
+  coverageThreshold: {
+    global: {
+      branches: 30,
+      functions: 30,
+      lines: 30,
+      statements: 30
+    },
+  },
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: '<rootDir>/',
+  }),
 };
 
 export default config;
