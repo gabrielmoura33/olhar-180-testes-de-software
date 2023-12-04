@@ -22,7 +22,7 @@
     "paths": {
       "@application/*":["./src/app/*"],
       "@infra/*":["./src/infra/*"],
-      "@test/*":["./__test__/*"]
+      "@tests/*":["./src/__tests__/*"]
     }
   }
 }

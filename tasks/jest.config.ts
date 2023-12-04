@@ -19,6 +19,7 @@ const config: Config = {
     '!**/coverage/**',
     '!**/*.dto.ts',
     '!**/*.input.ts',
+    '!**/infra/database/prisma/repositories/**'
   ],
   coverageDirectory: './coverage',
   testEnvironment: 'node',
