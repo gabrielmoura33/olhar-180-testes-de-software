@@ -27,7 +27,6 @@ describe('InMemoryTaskRepository', () => {
 
   describe('updateTaskById', () => {
     it('should update a task and return the updated task', async () => {
-      // Primeiro, crie uma tarefa
       const taskDto: CreateTaskDto = {
         title: 'Test Task',
         description: 'Test Description',
@@ -37,7 +36,6 @@ describe('InMemoryTaskRepository', () => {
       };
       const task = await taskRepository.createTask(taskDto);
 
-      // Atualize a tarefa
       const updatedTask = await taskRepository.updateTaskById(task.id, {
         title: 'Updated Task',
       });
@@ -58,10 +56,7 @@ describe('InMemoryTaskRepository', () => {
       };
       const task = await taskRepository.createTask(taskDto);
 
-      // Delete a tarefa
       await taskRepository.deleteTaskById(task.id);
-
-      // Tente recuperar a tarefa
       const retrievedTask = await taskRepository.getTaskById(task.id);
       expect(retrievedTask).toBeNull();
     });

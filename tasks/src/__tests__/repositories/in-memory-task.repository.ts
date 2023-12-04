@@ -36,7 +36,17 @@ export class InMemoryTaskRepository extends TasksRepository {
       isActive: true,
       User: {id: '3', authUserId: 'authUserId3'},
       userId: '3',
-    }
+    },
+    {
+      id: '4',
+      title: 'Test Task 4',
+      description: 'Test Description 4',
+      priority: 'high',
+      date: new Date(),
+      isActive: true,
+      userId: '1',
+      User: {id: '1', authUserId: 'authUserId1'},
+    },
   ];
 
   async createTask(createTaskDto: CreateTaskDto): Promise<Task> {
